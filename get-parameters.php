@@ -1,21 +1,22 @@
 <?php
-  # Retrieve settings from Parameter Store
-  error_log('Retrieving settings');
-  require 'aws.phar';
-  
-  $az = file_get_contents('http://169.254.169.254/latest/meta-data/placement/availability-zone');
-  $region = substr($az, 0, -1);
-  $ssm_client = new Aws\Ssm\SsmClient([
-     'version' => 'latest',
-     'region'  => $region
-  ]);
-  
-  try {
-    # Retrieve settings from Parameter Store
-    $result = $ssm_client->GetParametersByPath(['Path' => '/example/', 'WithDecryption' => true]);
+require 'vendor/autoload.php'; // after installing via Composer
 
-    # Extract individual parameters
-    foreach($result['Parameters'] as $p) {
+use Aws\Ssm\SsmClient;
+
+$region = 'us-east-1';
+
+$ssm_client = new SsmClient([
+    'version' => 'latest',
+    'region'  => $region
+]);
+
+try {
+    $result = $ssm_client->getParametersByPath([
+        'Path' => '/example/',
+        'WithDecryption' => true
+    ]);
+
+    foreach ($result['Parameters'] as $p) {
         $values[$p['Name']] = $p['Value'];
     }
 
@@ -23,12 +24,8 @@
     $un = $values['/example/username'];
     $pw = $values['/example/password'];
     $db = $values['/example/database'];
-  }
-  catch (Exception $e) {
-    $ep = '';
-    $db = '';
-    $un = '';
-    $pw = '';
-  }
-
+} catch (Exception $e) {
+    $ep = $un = $pw = $db = '';
+    error_log('SSM retrieval failed: ' . $e->getMessage());
+}
 ?>
