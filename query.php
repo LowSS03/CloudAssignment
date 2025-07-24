@@ -173,9 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <br>
-<div id="Copyright" class="center">
-    <h5>&copy; 2020, Amazon Web Services, Inc. or its Affiliates. All rights reserved.</h5>
-</div>
+
 
 </body>
 </html>
