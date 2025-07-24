@@ -10,6 +10,8 @@
 
 <?php
     include("header.php");
+
+    $_pick = $_POST["selection"] ?? $_GET["selection"];
 ?>
 
 <br>
@@ -41,7 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" || isset($_GET["selection"])) {
         die("<p style='color:red;'>Connection failed: " . $conn->connect_error . "</p>");
     }
 
-    $_pick = $_POST["selection"] ?? $_GET["selection"];
     $sortColumn = $_GET['sort'] ?? null;
     $sortOrder = $_GET['order'] ?? 'asc';
 
