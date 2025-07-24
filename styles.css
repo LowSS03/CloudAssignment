@@ -125,7 +125,7 @@ form {
     padding: 20px;
 }
 
-select, input[type="submit"] {
+select, input[type="submit"], #countrySearch  {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -137,10 +137,14 @@ select, input[type="submit"] {
     cursor: pointer;
 }
 
-select:hover, input[type="submit"]:hover {
+select:hover, input[type="submit"]:hover, #countrySearch:hover,#countrySearch:focus {
     background: #222;
     box-shadow: 0 0 10px #ff00c8;
     color: #ff00c8;
+}
+
+#countrySearch::placeholder {
+    color: #00ffe1;
 }
 
 img {
