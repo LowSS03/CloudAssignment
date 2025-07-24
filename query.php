@@ -17,22 +17,20 @@
 <div class="center"><H2>Country Data Query Page</H2></div>
 <br>
 
-<H2>Please select which query you want to run.</H2>
-
 <form id="form1" method="post" action="query.php">
-    <select name="selection">
+    <select name="selection" onchange="this.form.submit()">
         <option value="">Select...</option>
-        <option value='Q1'>Mobile phones</option>
-        <option value='Q2'>Population</option>
-        <option value='Q3'>Life Expectancy</option>
-        <option value='Q4'>GDP</option>
-        <option value='Q5'>Childhood Mortality</option>
+        <option value="Q1" <?= ($_pick == "Q1") ? "selected" : "" ?>>Mobile phones</option>
+        <option value="Q2" <?= ($_pick == "Q2") ? "selected" : "" ?>>Population</option>
+        <option value="Q3" <?= ($_pick == "Q3") ? "selected" : "" ?>>Life Expectancy</option>
+        <option value="Q4" <?= ($_pick == "Q4") ? "selected" : "" ?>>GDP</option>
+        <option value="Q5" <?= ($_pick == "Q5") ? "selected" : "" ?>>Childhood Mortality</option>
     </select>
-    <input type="submit" value="Submit">
 
     <!-- Live Search Input -->
     <input type="text" id="countrySearch" placeholder="Search Country..." style="margin-left:10px;">
 </form>
+
 
 <div class="center">
 <?php
