@@ -1,21 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Example Site;!</title>
-	<link rel="stylesheet" href="styles.css">
-	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Futuristic Landing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="test.css" />
 </head>
-
 <body class="bodyStyle">
-	<?php
-	include("header.php");
 
-	// Get the application environment parameters from the Parameter Store.
-	include('getAppParameters.php');
-
-	// Display the server metadata information if the showServerInfo parameter is true.
-
-	?>
+  <div class="top-bar">
+        <img src="Logo.png" alt="Logo" width="50" height="auto">
+    <div class="logo">Data<span class="glow">Dump</span></div>
+  </div>
 <div class="content-wrapper">
   <div class="center-column">
     <h1>Welcome to our <span class="highlight">data query site</span></h1>
@@ -26,5 +23,6 @@
     <h1>Data or a variety of areas including <span class="highlight">basic demographics</span> & <span class="highlight">development statistics</span></h1>
   </div>
 </div>
+
 </body>
 </html>

@@ -1,0 +1,130 @@
+/* General Body Styling */
+body.bodyStyle {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #0d1b2a);
+  height: 100vh;
+  color: #f0f0f0;
+  overflow: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    /* padding: 10px 0px; */
+    /* background-color: rgba(0, 0, 0, 0.4); */
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 40px;
+    /* space between left and right */
+}
+
+.org-name {
+    font-size: 1.4em;
+    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    white-space: nowrap;
+    letter-spacing: 2px;
+}
+
+.org-name .glow {
+    color: #00ffe1;
+    text-shadow: 0 0 10px #00ffe1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #00ffe1;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff00c8;
+}
+
+
+/* Center Content */
+/* Wrapper to center everything inside */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Column for stacking text and orb vertically */
+.center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+}
+
+/* Headings */
+.center-column h1 {
+  font-size: 2.2vw;
+  /* margin: 10px 0; */
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Highlighted text */
+.highlight {
+  color: #ff00c8;
+  text-shadow: 0 0 8px #ff00c8;
+}
+
+/* Orb as a link */
+.orb-link {
+  margin-top: 40px;
+  text-decoration: none;
+}
+
+.orb {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff00c880 0%, #222 90%);
+  box-shadow:
+    0 0 20px #ff00c8,
+    0 0 60px #00ffe1,
+    0 0 100px #0ff;
+  animation: pulse 4s infinite ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.orb:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 20px #ff00c8,
+      0 0 60px #00ffe1,
+      0 0 100px #0ff;
+  }
+  50% {
+    box-shadow:
+      0 0 40px #ff00c8,
+      0 0 80px #00ffe1,
+      0 0 140px #0ff;
+  }
+}

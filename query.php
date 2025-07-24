@@ -8,15 +8,15 @@
 
 <body class="bodyStyle">
 
-<div id="header" class="mainHeader">
-    <hr>
-    <div class="center"><H1>Example Social Research Organization</H1></div>
-</div>
+<?php
+    include("header.php");
+?>
+
 <br>
 <hr>
 <div class="center"><H2>Country Data Query Page</H2></div>
 <br>
-<H2><a href="index.php">Home</a></H2>
+
 <H2>Please select which query you want to run.</H2>
 
 <form id="form1" method="post" action="query.php">
