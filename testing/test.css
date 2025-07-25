@@ -1,13 +1,3 @@
-/* General Body Styling */
-body.bodyStyle {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #0d1b2a);
-  height: 100vh;
-  color: #f0f0f0;
-  overflow: hidden;
-}
-
 /* Navigation Bar */
 .navbar {
     display: flex;
@@ -53,7 +43,6 @@ body.bodyStyle {
 .nav-links a:hover {
     color: #ff00c8;
 }
-
 
 /* Center Content */
 /* Wrapper to center everything inside */
@@ -113,6 +102,14 @@ body.bodyStyle {
   transform: scale(1.05);
   cursor: pointer;
 }
+
+canvas {
+  display: block;
+  width: 50vw;
+  height: 50vh;
+  cursor: pointer;
+}
+
 
 @keyframes pulse {
   0%, 100% {

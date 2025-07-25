@@ -68,7 +68,7 @@
 /* Headings */
 .center-column h1 {
   font-size: 2.2vw;
-  /* margin: 10px 0; */
+  margin: 10px 0;
   line-height: 1.4;
   word-break: break-word;
 }
@@ -79,8 +79,63 @@
   text-shadow: 0 0 8px #ff00c8;
 }
 
+.orb-container {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  margin: 50px auto;
+  border-radius: 50%;
+  overflow: visible;
+}
+
+#orbParticles {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.orb-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 30px;
+  left: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff00c880 0%, #110022 90%);
+  box-shadow:
+    0 0 40px #ff00c8,
+    0 0 80px #00ffe1,
+    inset 0 0 60px #00ffe1;
+  z-index: 2;
+  animation: pulseOrb 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+
+    @keyframes pulseOrb {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow:
+          0 0 40px #ff00c8,
+          0 0 80px #00ffe1,
+          inset 0 0 60px #00ffe1;
+      }
+      50% {
+        transform: scale(1.04);
+        box-shadow:
+          0 0 60px #ff00c8,
+          0 0 100px #00ffe1,
+          inset 0 0 80px #ff00c8;
+      }
+    }
+
+
 /* Orb as a link */
-.orb-link {
+/* .orb-link {
   margin-top: 40px;
   text-decoration: none;
 }
@@ -101,7 +156,7 @@
 .orb:hover {
   transform: scale(1.05);
   cursor: pointer;
-}
+} */
 
 @keyframes pulse {
   0%, 100% {
@@ -117,6 +172,7 @@
       0 0 140px #0ff;
   }
 }
+
 
 /* Futuristic and Technological Theme */
 body.bodyStyle {

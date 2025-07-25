@@ -1,4 +1,5 @@
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>Example Site;!</title>
@@ -11,20 +12,23 @@
 	include("header.php");
 
 	// Get the application environment parameters from the Parameter Store.
-	include('getAppParameters.php');
+	// include('getAppParameters.php');
 
 	// Display the server metadata information if the showServerInfo parameter is true.
 
 	?>
-<div class="content-wrapper">
-  <div class="center-column">
-    <h1>Welcome to our <span class="highlight">data query site</span></h1>
-    <h1>Get <span class="highlight">data from countries</span> all over the world to <span class="highlight">use in your research</span></h1>
-	<a href="query.php" class="orb-link">
-      <div class="orb"></div>
-    </a>
-    <h1>Data or a variety of areas including <span class="highlight">basic demographics</span> & <span class="highlight">development statistics</span></h1>
-  </div>
-</div>
+	<div class="content-wrapper">
+		<div class="center-column">
+			<h1>Welcome to our <span class="highlight">data query site</span></h1>
+			<h1>Get <span class="highlight">data from countries</span> all over the world to <span class="highlight">use in your research</span></h1>
+			<div class="orb-container">
+				<canvas id="orbParticles"></canvas>
+				<div class="orb-glow"></div>
+				<script src="particles-orb.js"></script>
+			</div>
+			<h1>Data or a variety of areas including <span class="highlight">basic demographics</span> & <span class="highlight">development statistics</span></h1>
+		</div>
+	</div>
 </body>
+
 </html>
