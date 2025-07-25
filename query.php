@@ -14,10 +14,8 @@
     $_pick = $_POST["selection"] ?? $_GET["selection"];
 ?>
 
-<br>
-<hr>
+
 <div class="center"><H2>Country Data Query Page</H2></div>
-<br>
 
 <form id="form1" method="post" action="query.php">
     <select name="selection" onchange="this.form.submit()">

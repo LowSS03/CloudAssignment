@@ -15,11 +15,11 @@
                 <a href="index.php">
                     <img src="Logo.png" alt="Logo" width="50" height="auto">
                 </a>
-                <div class="org-name">Data<span class="glow">Dump</span></div>
+                <div class="org-name">Malaysian Social Research Institute<span class="glow"> (MSRI) </span></div>
             </div>
             <div class="nav-links">
                 <a href="index.php">Home 🏠</a>
-                <a href="#aboutUs">About Us 👥</a>
+                <a href="about_us.php">About Us 👥</a>
                 <a href="#contactUs">Contact Us ☎️</a>
                 <a href="query.php">Query 📰</a>
             </div>
