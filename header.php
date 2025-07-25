@@ -20,7 +20,7 @@
             <div class="nav-links">
                 <a href="index.php">Home 🏠</a>
                 <a href="about_us.php">About Us 👥</a>
-                <a href="#contactUs">Contact Us ☎️</a>
+                <a href="contact_us.php">Contact Us ☎️</a>
                 <a href="query.php">Query 📰</a>
             </div>
         </div>
